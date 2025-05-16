@@ -20,6 +20,7 @@ function Results() {
           <p>2nd Place: {result.secondPlace.team.player1.name} & {result.secondPlace.team.player2.name} (${result.secondPlace.amount})</p>
           <p>High Score: {result.highScore.team.player1.name} & {result.highScore.team.player2.name} (${result.highScore.amount})</p>
           <p>Closest to Pin: {result.closestToPin.player.name} (${result.closestToPin.amount})</p>
+          <p>Deuce Pot: {result.deucePot.player.name} (${result.deucePot.amount})</p>
         </div>
       )) : (
         <p>No results yet.</p>

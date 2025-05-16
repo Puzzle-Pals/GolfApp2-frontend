@@ -23,6 +23,13 @@ function Home() {
       ) : (
         <p>Loading event...</p>
       )}
+
+      {/* Top-right quick access */}
+      <div className="flex justify-end space-x-4 mt-4">
+        <a href="/results" className="text-blue-600 underline">Results</a>
+        <a href="/stats" className="text-blue-600 underline">Stats</a>
+        <a href="/leaderboard" className="text-blue-600 underline">Leaderboard</a>
+      </div>
     </div>
   );
 }

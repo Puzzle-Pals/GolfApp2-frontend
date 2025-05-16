@@ -19,6 +19,10 @@ function Stats() {
           <p>Average Score: {player.stats.averageScore}</p>
           <p>Birdies: {player.stats.birdies}</p>
           <p>Wins: {player.stats.wins}</p>
+          <p>2nd Place: {player.stats.secondPlace}</p>
+          <p>Highest Score: {player.stats.highestScore}</p>
+          <p>Deuce Pot Wins: {player.stats.deucePot}</p>
+          <p>Closest to Pin: {player.stats.closestToPin}</p>
         </div>
       )) : (
         <p>No player stats yet.</p>
