@@ -1,18 +1,30 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { HomeIcon, ChartBarIcon, UserIcon, CogIcon } from '@heroicons/react/24/outline';
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="bg-green-600 text-white p-4 flex justify-between">
-      <div className="text-lg font-bold">Golf League</div>
-      <div className="space-x-4">
-        <Link to="/" className="hover:underline">Home</Link>
-        <Link to="/scorecard" className="hover:underline">Scorecard</Link>
-        <Link to="/results" className="hover:underline">Results</Link>
-        <Link to="/stats" className="hover:underline">Stats</Link>
-        <Link to="/admin" className="hover:underline">Admin</Link>
+    <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg">
+      <div className="flex justify-around py-2">
+        <Link to="/" className="flex flex-col items-center text-green-700">
+          <HomeIcon className="h-6 w-6" />
+          <span className="text-xs">Home</span>
+        </Link>
+        <Link to="/results" className="flex flex-col items-center text-green-700">
+          <ChartBarIcon className="h-6 w-6" />
+          <span className="text-xs">Results</span>
+        </Link>
+        <Link to="/stats" className="flex flex-col items-center text-green-700">
+          <UserIcon className="h-6 w-6" />
+          <span className="text-xs">Stats</span>
+        </Link>
+        <Link to="/settings" className="flex flex-col items-center text-green-700">
+          <CogIcon className="h-6 w-6" />
+          <span className="text-xs">Settings</span>
+        </Link>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

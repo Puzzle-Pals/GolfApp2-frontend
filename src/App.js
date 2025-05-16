@@ -1,26 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Scorecard from './components/Scorecard';
-import Results from './components/Results';
-import Stats from './components/Stats';
-import Admin from './components/Admin';
-import './styles.css';
+import Home from './pages/Home';
+import Results from './pages/Results';
+import Stats from './pages/Stats';
+import Settings from './pages/Settings';
+import Admin from './admin/Admin';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-green-100">
-        <Navbar />
+    <Router>
+      <div className="relative min-h-screen pb-16">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/scorecard" element={<Scorecard />} />
           <Route path="/results" element={<Results />} />
           <Route path="/stats" element={<Stats />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/admin/*" element={<Admin />} />
         </Routes>
+        <Navbar />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
