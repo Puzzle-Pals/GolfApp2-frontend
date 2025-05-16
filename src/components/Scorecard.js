@@ -3,8 +3,8 @@ import axios from 'axios';
 
 function Scorecard() {
   const [scores, setScores] = useState(Array(9).fill(''));
-  const [birdies, setBirdies] = useState([]);
-  const [closestToPin, setClosestToPin] = useState('');
+  const [birdies, setBirdies] = useState([0]);
+  const [closestToPin, setClosestToPin] = useState('0');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
